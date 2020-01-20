@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+       <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+      
+    
+       
+    
+    </head>
+    <body>
+        <div class="container">
+            
+           <h2 class="header">REGISTRATION<i class="fa fa-registered" aria-hidden="true"></i></h2>
+        <div class="main">
+           <div class="row">
+               <div class="col-md-12">
+                   <p>Registration Details<i class="fa fa-user-plus" aria-hidden="true"></i></p>
+               <div class="col-md-8">
+                   <input type="text" id="fname" placeholder="First Name" required><br><br>
+                   <input type="text" id="lname" placeholder="Last Name" required><br><br>
+                   <input type="text" id="city" placeholder="City" required><br><br>
+                   <input type="text" id="sta" placeholder="State" required><br><br>
+                   <input type="text" id="qua" placeholder="Qualification" required><br><br>
+                   <input type="date" id="date" placeholder="Date" required><br><br>
+                   <input type="text" id="user" placeholder="Username" required><br><br>
+                   <input type="text" id="email" placeholder="Email" required>
+
+               </div>
+               <div class="col-md-2">
+                <button type="submit" class="btn btn-primary" id="add" onclick="add()">Register</button>
+              </div>
+            </div>
+            <div class="col-md-12">
+                <br>
+                <p>USER LIST <i class="fa fa-server" aria-hidden="true"></i></p>
+
+            </div>
+           </div>
+           <div class="user" id="userList"></div>
+            </div>
+        </div>
+    </body>
+</html>

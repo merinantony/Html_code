@@ -1,0 +1,127 @@
+<html>
+    <head>
+       <title></title>
+       <meta charset="utf-8">
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+       <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+       <link rel="stylesheet" href="style.css">
+       
+      
+    </head>
+  <body>
+    <div class="container">
+        <h2 class="heading">Registration</h2>
+        <div class="user">
+            <div class="row">
+              
+                    <div class="col-md-8">
+                       
+                       FIRST NAME <input type="text"  id="fname" style="margin-left: 60px;"  required="required"><br><br>
+                       LAST NAME<input type="text"  id="lname" style="margin-left: 68px;" required="required"><br><br>
+                       DATE OF BIRTH <input type="date"  id="birth"style="margin-left: 38px;"  required="required"><br><br> 
+                       EMAIL <input type="email" id="email" style="margin-left: 102px;"  required="required"><br><br>
+                      
+                       MOBILE NUMBER<input type="text" id="number" style="margin-left: 30px;"  required="required"><br><br>
+                       Gender <input type="radio" id="male" style="margin-left: 95px;"  required="required">Male<input type="radio" name="" id="female"  required="required">Female<br><br>
+                       ADDRESS<input type="text"  id="addr" style="margin-left: 80px;" required="required"><br><br>
+                       
+                   
+                       <button type="submit" class="btn btn-primary"  onclick="add()">SUBMIT</button>
+                      
+                       <button type="submit" class="btn btn-primary" onclick="home()"  >BACK</button>
+           
+                    </div>
+           
+                    <div class="col-md-2">
+                     <table id="table">
+                         <tr>
+                             <th>Registration Details</th>
+                             <th></th>
+                            
+                         </tr>
+                     </table>
+                 </div>
+                 <script>
+                     var rIndex,
+                     table = document.getElementById("table");
+                 
+                 function checkEmptyInput() {
+                     var isEmpty = false,
+                         fname = document.getElementById("fname").value,
+                         lname = document.getElementById("lname").value;
+                        
+                     if (fname==="")
+                      {
+                         alert("First Name Connot Be Empty");
+                         isEmpty = true;
+                     }
+                     else if (lname==="")
+                     {
+                        alert("Last Name Connot Be Empty");
+                        isEmpty = true;
+                    }
+                    else if (birth==="")
+                     {
+                        alert("date of birth Connot Be Empty");
+                        isEmpty = true;
+                    }
+                    else if (email==="")
+                    {
+                       alert("Email Connot Be Empty");
+                       isEmpty = true;
+                   }
+                   else if (number==="")
+                   {
+                      alert("Number Connot Be Empty");
+                      isEmpty = true;
+                  }
+                   else if (addr==="")
+                   {
+                      alert("Address Connot Be Empty");
+                      isEmpty = true;
+                  }
+     
+     
+                     return isEmpty;
+                             }
+                             function add() {
+                               
+                                 if (!checkEmptyInput()) {
+                                     var newRow = table.insertRow(table.length),
+                                         cell1 = newRow.insertCell(0),
+                                         fname = document.getElementById("fname").value;
+                                         cell1.innerHTML = fname;
+                                         var newRow = table.insertRow(table.length),
+                                         cell1 = newRow.insertCell(0),
+                                         lname = document.getElementById("lname").value;
+                                         cell1.innerHTML = lname;
+                                         var newRow = table.insertRow(table.length),
+                                         cell1 = newRow.insertCell(0),
+                                         birth = document.getElementById("birth").value;
+                                         cell1.innerHTML = birth;
+                                         var newRow = table.insertRow(table.length),
+                                         cell1 = newRow.insertCell(0),
+                                         email = document.getElementById("email").value;
+                                         cell1.innerHTML = email;
+                                         var newRow = table.insertRow(table.length),
+                                         cell1 = newRow.insertCell(0),
+                                         number = document.getElementById("number").value;
+                                         cell1.innerHTML = number;
+                                         var newRow = table.insertRow(table.length),
+                                         cell1 = newRow.insertCell(0),
+                                         addr = document.getElementById("addr").value;
+                                         cell1.innerHTML = addr;
+                                         var newRow = table.insertRow(table.length),
+                                         cell1 = newRow.insertCell(0);
+                                        
+                                         cell1.innerHTML ="<button  onclick=login(); id='button' ;>Register</button>";
+                                       
+     
+                                        
+                                 }
+                             }
+                            
+                           </script>
+
+            </body>
+</html>

@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <title></title>
+        <style>
+            body{
+                background: red;
+            }
+            .container{
+              overflow: hidden;
+              
+            }
+            tr {
+                transition: all .25s ease-in-out
+            }
+
+           
+            #form{
+               text-align: center;
+               margin-top: 200px;
+                        }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+        <div class="box">
+            <table style="background: green;" id="table" border="1">
+                <tr>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Age</th>
+                </tr>
+               </table>
+            </div>
+        <div id="form">
+        <form>
+            <p>First Name:</p> 
+            <input type="text" id="name">
+            <p>Last Name:</p>
+            <input type="text" id="name1">
+            <p>Age:</p> 
+            <input type="number" id="age"><br><br>
+            <button onclick="addHtmlTableRow();">Add</button>
+            <button onclick="editHtmlTbleSelectedRow();">Edit</button>
+            <button onclick="removeSelectedRow();">Remove</button>
+            </form>
+        </div>
+           </div>
+           <script>
+           var rIndex,
+           table=document.getElementById("table");
+           function checkEmptyInput(){
+               var isEmpty=false,
+               name=document.getElementById("name").value,
+               name1=document.getElementById("name1").value,
+               age=document.getElementById("age").value;
+               
+               if(name===""){
+                   alert("Name cannot be empty");
+                   isEmpty=true;
+
+               }
+              else if(name1===""){
+                alert("Name cannot be empty");
+                isEmpty=true;
+
+            }
+            else if(age===""){
+                alert("Age cannot be empty");
+                isEmpty=true;
+
+            }
+            return isEmpty;
+        }
+
+         function addHtmlTableRow(){
+             if(!checkEmptyInput()){
+                 var newRow=table.insertRow(table.length),
+                 cell1=newRow.insertCell(0),
+                 cell2=newRow.insertCell(1),
+                 cell3=newRow.insertCell(2),
+                 name=document.getElementById("name").value,
+                 name1=document.getElementById("name1").value,
+                 age=document.getElementById("age").value;
+             cell1.innerHTML=name;
+             cell2.innerHTML=name1;
+             cell3.innerHTML=age;
+        selectedRowToInput();
+             }
+            }
+         
+           </script>
+                
+    </body>
+</html>

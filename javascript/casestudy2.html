@@ -1,0 +1,109 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <style>
+        .form{
+            text-align: center;
+           margin-top: 200px;
+        }
+        .box{
+            margin-top: 30px;
+        }
+    </style>
+    <body>
+        <div class="main">
+            <div class="box1">
+                <table id="table1">
+                </table>
+                </div>
+          <div class="box">
+          <table id="table">
+             
+              <tr>
+                  <th>Name</th>
+                  <th></th>
+                 
+              </tr>
+          </table>
+
+
+
+          </div>
+        
+  
+
+
+
+            <div class="form">
+               <input type="text" name="fname" id="fname">
+               <button onclick="addHtmlTableRow();">Add</button>
+            </div>
+        </div>
+
+<script>
+    var rIndex,
+    table = document.getElementById("table");
+
+function checkEmptyInput() {
+    var isEmpty = false,
+        fname = document.getElementById("fname").value;
+       
+    if (fname==="")
+     {
+        alert("Name Connot Be Empty");
+        isEmpty = true;
+    }
+    return isEmpty;
+            }
+            function addHtmlTableRow() {
+              
+                if (!checkEmptyInput()) {
+                    var newRow = table.insertRow(table.length),
+                        cell1 = newRow.insertCell(0),
+                        cell2 = newRow.insertCell(1),
+                        cell3 = newRow.insertCell(2),
+                        fname = document.getElementById("fname").value;
+                        cell1.innerHTML = fname;
+                        cell2.innerHTML = " <button onclick=editor(); id='button' ;>Edit</button>";
+                        cell3.innerHTML = " <button onclick=removeSelectedRow(); id='button1';>Delete</button>";
+                }
+            }
+            function removeSelectedRow() {
+                table.deleteRow(1);
+                document.getElementById("fname").value = "";
+                
+            }
+            
+            function editor(){
+                var newRow = table1.insertRow(table1.length),
+                cell1 = newRow.insertCell(0),
+                cell2 = newRow.insertCell(1);
+                cell1.innerHTML = "<input type='text'; id='name1';>";
+                cell2.innerHTML = " <button onclick=edit(); id='button11';>Edit</button>";
+                for (var i = 1; i < table.rows.length; i++) {
+                    table.rows[i].onclick = function () {
+                        rIndex=this.rowIndex;
+                        document.getElementById("name1").value = this.cells[0].innerHTML;
+                    };
+                }
+            }
+           function edit(){
+            var newRow = table.insertRow(table.length),
+            cell1 = newRow.insertCell(0),
+            name1=document.getElementById("name1").value;
+            table=rows[rIndex].cells[0].innerHTML=name1;
+            
+           } 
+
+
+
+</script>
+
+
+
+
+
+
+    </body>
+</html>

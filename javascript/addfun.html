@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            function add(a,b){
+                var c= a+b;
+                document.write(c);
+                window.print();
+               
+           
+            }
+            function sub(a,b){
+                var c= a-b;
+                document.write(c);
+                window.print();
+               
+           
+            }
+            function mul(a,b){
+                var c= a*b;
+                document.write(c);
+                window.print();
+               
+           
+            }
+            function div(a,b){
+                var c= a/b;
+                document.write(c);
+               
+           
+            }
+            
+
+
+        </script>
+    </head>
+    <body>
+        <script>
+        var a = prompt("Enter the value");
+        var b = prompt("Enter the value");
+        a=parseInt(a);
+        b=parseInt(b);
+        
+        </script>
+        <form>
+        <input type="button" onclick="add(a,b)" value="ADD">
+        <input type="button" onclick="sub(a,b)" value="SUB">
+        <input type="button" onclick="mul(a,b)" value="MUL">
+        <input type="button" onclick="div(a,b)" value="DIV">
+    </form>
+    </body>
+</html>

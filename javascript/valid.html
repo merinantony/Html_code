@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>s</title>
+    </head>
+    <body>
+      <form onsubmit="return myfunction()">
+       
+        Full Name:<input type="text" id="fname" size="20" name="fname">
+        Rollno:<input type="text" id="fname" size="20" name="fname">
+    Age:<input type="text" id="age" size="20" name="age"><br>
+    Email:<input type="text" id="email" size="20" name="email"><br><br>
+    <input type="submit" value="submit">
+    </form>
+  <script>
+     
+            var at=document.getElementById("email").value.indexof("@");
+            var age=document.getElementById("age").value;
+            var name=document.getElementById("fname").value;
+            submitOk="true";
+        
+        if(fname.length>10)
+        {
+            alert("the name may have no more than 10 characters");
+            submitOk=false;
+        }
+        if(isNaN(age)||age<1||age>100)
+        {
+            alert("The age must be a number ");
+            submitok="false";
+        }
+        if(at==-1)
+        {
+            alert("invalid email");
+            submitok="false";
+        }
+        if(submitok=="false")
+        {
+            return false;
+        }
+      
+    </script>
+     </body>
+</html>

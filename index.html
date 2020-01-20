@@ -1,0 +1,87 @@
+<html>
+    <head>
+       <title></title>
+       <meta charset="utf-8">
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+       <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+       <link rel="stylesheet" href="style.css">
+      
+      
+    </head>
+  <body style="background-image: url(img.jpg); background-repeat: no-repeat; background-size: cover;">
+    
+       
+   <div id="button">
+      <div class="container">
+        
+          <div class="header">
+              <div class="row">
+                  <div class="col-md-8">
+             <p>Integrated School<img id="image" style="margin-left: 30px;" width="70px" height="70px" src="logo.jpg"></p>
+             </div>
+              <div class="col-md-4">
+                 
+             <button id="bb" onclick="login()" >Signin</button>
+          
+           
+              <button id="bb" onclick="register()" >Signup</button>
+           
+           </div>
+
+           
+          
+          </div>
+         
+        
+       
+      
+       </div>
+      
+       </div>
+     </div>
+<script>
+  function login(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange=function()
+    {
+      if(this.readyState==4 && this.status==200)
+      {
+        document.getElementById("button").innerHTML=this.responseText;
+      };
+    }
+    xhttp.open("GET", "login.html",true);
+    xhttp.send();
+  }
+  function register(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange=function()
+    {
+      if(this.readyState==4 && this.status==200)
+      {
+        document.getElementById("button").innerHTML=this.responseText;
+      };
+    }
+    xhttp.open("GET", "register.html",true);
+    xhttp.send();
+  }
+  function home(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange=function()
+    {
+      if(this.readyState==4 && this.status==200)
+      {
+        document.getElementById("button").innerHTML=this.responseText;
+      };
+    }
+    xhttp.open("GET", "register.html",true);
+    xhttp.send();
+  }
+  
+  
+  
+
+</script>
+
+  </body>
+
+</html>

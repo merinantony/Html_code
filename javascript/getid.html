@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+   <script type="text/javascript">
+   function add(){
+       var a=parseInt(document.getElementById("a").value);
+       var b=parseInt(document.getElementById("b").value);
+      document.getElementById("adds").value=a+b;
+   }
+</script>
+<form>
+    First Number: <input type="text" id="a">
+    Second Number: <input type="text" id="b">
+    Add: <input type="text" id="adds">
+    <input type="button" value="Add" onclick="add()">
+</form>
+</html>

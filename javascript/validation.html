@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>s</title>
+    </head>
+    <body>
+        <form>
+        Full Name: <input type="text" id="name"><br><br>
+        Rollno: <input type="text" id="rollno"><br><br>
+        Department: <input type="text" id="dept"><br><br>
+        Email: <input type="email" id="email"><br><br>
+        Password: <input type="password" id="pass"><br><br>
+      
+
+        <button type="button"  onclick="myFunction()">Submit</button>
+</form>
+<p id="num"></p>
+
+   <script>
+     function myFunction() {
+     var x, text;
+     x = document.getElementById("name").value;
+        if (isNaN(x) || x < 1 || x > 10) {
+          text = alert("Input not valid");
+          } 
+          else {
+            text = alert("Input OK");
+           }
+             document.getElementById("num").innerHTML = text;
+              }
+       </script>
+     </body>
+</html>

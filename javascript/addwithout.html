@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    First Number: &nbsp;&nbsp;&nbsp;&nbsp;<input type="number" id="a"><br><br>
+    Second Number: <input type="number" id="b"><br><br>
+    <button onclick="Myfunction(a.value,b.value)">click</button>
+    <script>
+        function Myfunction(a,b)
+        {
+          a=parseInt(a);
+          b=parseInt(b);
+          var n=a+b;
+          document.write("<h2>First Number: "+a+"</h2>");
+            document.write("<h2>Second Number: "+b+"</h2>");
+                document.write("<h2>By Adding: "+n+"</h2>");
+        }
+    </script>
+</html>

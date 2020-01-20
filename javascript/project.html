@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>register</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="main.css">
+        <script src="main1.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <h2 class="heading">Registration<i class="fa fa-registered" aria-hidden="true"></i></h2>
+            <div class="adduser">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>Registration Details <i class="fa fa-user-plus" aria-hidden="true"></i></p>
+                        <div class="col-md-8">
+                           
+                            <input type="text" name="" id="fname" placeholder="FirstName" required="required"><br><br>
+                            <input type="text" name="" id="lname" placeholder="LastName" required="required"><br><br>
+                            <input type="text" name="" id="city" placeholder="City" required="required"><br><br>
+                            <input type="text" name="" id="state" placeholder="State" required="required"><br><br>
+                            <input type="text" name="" id="qualification" placeholder="Qualification" required="required"><br><br>
+                            <input type="date" name="Date" id="date" required="required"><br><br>
+                            <input type="text" name="" id="uname" placeholder="UserName" required="required"><br><br>
+                            <input type="email" name="" id="email" placeholder="E-mail" required="required"><br><br>
+                       
+                   
+                </div>
+                        <div class="col-md-2">
+                            <button type="submit" class="btn btn-primary" id="adduser" onclick="adduser()">Register</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <br>
+                            <p>Users List <i class="fa fa-server" aria-hidden="true"></i></p>
+                        </div>
+                    </div>
+                    <div class="user" id="userlist"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

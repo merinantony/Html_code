@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    First Name: <input type="text" id="name"><br><br>
+    Second Name: <input type="text" id="name1"><br><br>
+    Rollno: <input type="text" id="no"><br><br>
+    Email: <input type="email" id="email"><br><br>
+    Password: <input type="password" id="pass"><br><br>
+    <button onclick="Myfunction(name.value,name1.value,no.value,email.value,pass.value)">click</button>
+    <script>
+        function Myfunction(a,b)
+        {
+          a=parseInt(a);
+          b=parseInt(b);
+          var n=a+b;
+          document.write("<h2>First Number: "+a+"</h2>");
+            document.write("<h2>Second Number: "+b+"</h2>");
+                document.write("<h2>By Adding: "+n+"</h2>");
+        }
+    </script>
+</html>

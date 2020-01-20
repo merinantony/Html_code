@@ -1,0 +1,15 @@
+<html>
+
+<head><title>s</title>
+<script src="js/jquery-1.11.0.js"></script>
+</head>
+<body>
+<p id="user"></p>
+<script>
+var s='{"first_name" : "sammy","last_name" : "shark","location" : "ocean"}';
+var obj=JSON.parse(s);
+console.log(obj);
+document.getElementById("user").innerHTML="NAME: "+obj.first_name+" "+obj.last_name+"</br>"+"location: "+obj.location;
+</script>
+</body>
+</html>
